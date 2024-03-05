@@ -2,6 +2,8 @@ cmake_minimum_required(VERSION 3.2)
 
 set(MUSL $ENV{MUSL})
 
+set(CMAKE_SYSTEM_NAME Generic)
+
 set(CMAKE_C_COMPILER aarch64-none-elf-gcc)
 set(CMAKE_CXX_COMPILER aarch64-none-elf-g++)
 set(CMAKE_C_COMPILER_WORKS 1)
