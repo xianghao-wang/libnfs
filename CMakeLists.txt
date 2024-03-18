@@ -74,6 +74,7 @@ include_directories(${CMAKE_CURRENT_BINARY_DIR}
                     ${PICO}/
                     ${PICO}/newlib/libc/include
                     ${PICO}/newlib/libc/tinystdio
+                    ${PICO}/extensions/libnfs/include
                     ${LIBGCC}/include
                     )
 # list of system libs (sockets/etc) to be linked on this system
@@ -85,6 +86,9 @@ set(CORE_LIBRARIES "" CACHE INTERNAL "")
 if(WIN32 AND BUILD_SHARED_LIBS)
   add_definitions(-Dlibnfs_EXPORTS)
 endif()
+
+# add macro for Microkit
+add_definitions(-D__MICROKIT__)
 
 if(CMAKE_SYSTEM_NAME STREQUAL Windows)
   add_definitions("-D_U_=" -D_CRT_SECURE_NO_WARNINGS -D_CRT_NONSTDC_NO_DEPRECATE)
