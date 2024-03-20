@@ -74,7 +74,7 @@ include_directories(${CMAKE_CURRENT_BINARY_DIR}
                     ${PICO}/
                     ${PICO}/newlib/libc/include
                     ${PICO}/newlib/libc/tinystdio
-                    ${PICO}/extensions/libnfs/include
+                    ${PICO}/extensions/include
                     ${LIBGCC}/include
                     )
 # list of system libs (sockets/etc) to be linked on this system
